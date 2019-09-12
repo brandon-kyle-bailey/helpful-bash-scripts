@@ -6,8 +6,7 @@ yum update -y
 yum install httpd -y
 service httpd start
 chkconfig httpd on
-cd /var/www/html
-echo "<html><div><h1>Hello World!</h1></div></html>" > index.html
+echo "<html><div><h1>Hello World!</h1></div></html>" > /var/www/html/index.html
 
 # aws s3 mb s3://brandon-kyle-bailey-s3-bash-webserver-2019
-# aws s3 cp index.html s3://brandon-kyle-bailey-s3-bash-webserver-2019
+# aws s3 cp /var/www/html/index.html/index.html s3://brandon-kyle-bailey-s3-bash-webserver-2019
